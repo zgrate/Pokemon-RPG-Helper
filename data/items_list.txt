@@ -1,0 +1,245 @@
+Category	Tossed Items	Location	
+Bounce Band 	Bounces off all thrown items 	  	
+Curve Band 	"Makes thrown items bounce off walls and fly sideways, no effect on thrown rocks or Pokemon in Pierce status "	  	
+Def. Scarf 	Boosts user's Defense 	  	
+Detect Band 	Boosts user's Evasion 	  	
+Diet Ribbon 	"Enters Hungry Pal status, prevents Belly from filling, lowers Belly quicker "	  	
+Dodge Scarf 	Evades all thrown items 	  	
+Friend Bow 	Recruits Pokemon easier 	  	
+Gold Ribbon 	High priced item 	  	
+Heal Ribbon 	"Heals HP quicker, lowers Belly quicker "
+Joy Ribbon 	Receives experience when hit 	  		 
+Mobile Scarf 	"Allows user to walk through anything, lowers Belly "	  	
+Munch Band 	"Slightly boosts user's Attack and Special Attack, lowers Belly quicker "	  	
+No-Stick Cap 	Prevents items from being sticky and gummed up 	  	
+Pass Scarf 	"Passes added effects of attacks and certain attacks to adjacent Pokemon, lowers Belly "	  	
+Patsy Band 	Raises chance of taking critical hits 	  	
+Pecha Scarf 	Prevents Poisoned and Badly Poisoned status 	  	
+Persim Band 	Prevents Confused status 	  	
+Pierce Band 	"Makes thrown items pierce through everything without stopping, no effect on rocks "	  	
+Plain Ribbon 	No effect 	  	
+Power Band 	Boosts user's Attack 	  	
+Racket Band 	Helps waking initially sleeping pokemon 	  	
+Sneak Scarf 	Prevents user from waking up initially sleeping Pokemon 	  	
+Special Band 	Boosts user's Special Attack 	  	
+Stamina Band 	Lowers Belly slower 	  	
+Tight Belt 	"Prevents Belly from lowering, except when walking through walls and using linked moves "	  	
+Trap Scarf 	Prevents traps from going off if stepped on 	  	
+Twist Band 	Prevents Attack and Special Attack from lowering 	  	
+Warp Scarf 	occasionally warps user to elsewhere on the same floor 	  	
+Weather Band 	Neglects weather effects 	  	
+Zinc Band 	Boosts user's Special Defense 		
+			
+Category	User Specific Ribbons	Location	
+Blue Ribbon 	"Slightly raises Attack, Defense, Special Attack and Special Defense of users with blue aura "	  	
+Brown Ribbon 	"Slightly raises Attack, Defense, Special Attack and Special Defense of users with brown aura "	  	
+Green Ribbon 	"Slightly raises Attack, Defense, Special Attack and Special Defense of users with green aura "	  	
+Indigo Ribbon 	"Slightly raises Attack, Defense, Special Attack and Special Defense of users with indigo aura "	  	
+Magenta Ribbon 	"Slightly raises Attack, Defense, Special Attack and Special Defense of users with magenta aura "	  	
+Mint Ribbon 	"Slightly raises Attack, Defense, Special Attack and Special Defense of users with mint aura "	  	
+Olive Ribbon 	"Slightly raises Attack, Defense, Special Attack and Special Defense of users with olive aura "	  	
+Orange Ribbon 	"Slightly raises Attack, Defense, Special Attack and Special Defense of users with orange aura "	  	
+Pink Ribbon 	"Slightly raises Attack, Defense, Special Attack and Special Defense of users with pink aura "	  	
+Purple Ribbon 	"Slightly raises Attack, Defense, Special Attack and Special Defense of users with purple aura "	  	
+Red Ribbon 	"Slightly raises Attack, Defense, Special Attack and Special Defense of users with red aura "	  	
+Silver Ribbon 	"Slightly raises Attack, Defense, Special Attack and Special Defense of users with silver aura "	  	
+Treegreen Ribbon 	"Slightly raises Attack, Defense, Special Attack and Special Defense of users with treegreen aura "	  	
+Violet Ribbon 	"Slightly raises Attack, Defense, Special Attack and Special Defense of users with violet aura "	  	
+Waterblue Ribbon 	"Slightly raises Attack, Defense, Special Attack and Special Defense of users with waterblue aura "	  	
+Yellow Ribbon 	"Slightly raises Attack, Defense, Special Attack and Special Defense of users with yellow aura "		
+			
+Category	Tossed Items	Location	
+Cacnea Spike 	Hits target directly 		
+Corsola Twig 	Hits target directly 	  	
+Gold Fang 	Hits target directly 	  	
+Golden Twig 	Hits target directly 	Only found in Gold Chambers in optional missions 	
+Iron Thorn 	Hits target directly 	  	
+Ancient Fossil 	Arcs and hits target 	Only via optional mission 	
+Silver Spike 	Hits target directly 	  	
+Stick 	Hits target directly 	  	
+Geo Pebble 	Arcs and hits target 	  	
+Gravlerock 	Arcs and hits target 	  	
+			
+Category	Scopes	Location	
+Goggle Specs 	Reveals hidden traps and Invisible Pokemon 		  
+Insomniscope 	"Prevents Sleep, Napping, Nightmare and Yawning status "		  
+Lockon Specs 	Boosts accuracy of thrown items 		  
+No-Aim Scope 	Makes thrown items fly in any direction 		  
+Scope Lens 	Boosts chance of making critical hits 		  
+Whiff Specs 	Prevents thrown items from hitting others 		  
+X-Ray Specs 	Enables Pokemon to see location of items and foes 		  
+			
+Category	Rare Hold Items	Location	
+Fire Drum 	Recruits fire type Pokemon easier 	Giant Volcano Summit  	
+Flying Pianica 	Recruits flying type Pokemon easie 	Sky Stairs Summit 	
+Grass Trumpet 	Recruits grass type Pokemon easier 	Mysterious Jungle Interior 	
+Ice Flute 	Recruits ice type Pokemon easier 	Mt. Avalanche Summit 	
+Land Cymbal 	Recruits land type Pokemon easier 	Shimmering Desert Interior 	
+Rock Megaphone 	Recruits rock type Pokemon easier 	The Great Hole Bottom 	
+Water Harmonica 	Recruits water type Pokemon easier 	Bottomless Sea Bottom 	
+Amber Tear 	Maximally raises chance of recruiting Pokemon 	Zero Island West B40F 	
+Golden Mask 	Maximally raises chance of recruiting Pokemon 	Zero Island North B75F 	
+Miracle Chest 	Raises experience received 	Zero Island South B96F Key Room 	
+Wonder Chest 	Raises experience received 	Zero Island North B75F 	
+			
+Category	Food	Location	
+Apple 	"Slightly fills Belly, slightly enlarges Belly size when full "	  	
+Big Apple 	"Amply fills Belly, slightly enlarges Belly size when full "	  	
+Enormous Apple 	"Completely fills Belly, slightly enlarges Belly size when full "	  	
+Golden Apple 	"Completely fills Belly, amply enlarges Belly size when full "	Only found in Gold Chambers in optional missions 	
+Grimy Food 	"Slightly fills Belly, causes random status "	  	
+			
+Category	Berry	Location	
+Cheri Berry 	"Slightly fills Belly, Heals paralysis "	  	
+Chesto Berry 	"Slightly fills Belly, Heals sleep "	  	
+Oran Berry 	"Slightly fills Belly, Restores HP by 100 "	  	
+Pecha Berry 	"Slightly fills Belly, Heals poison "	  	
+Rawst Berry 	"Slightly fills Belly, Heals burn "	  	
+Sitrus Berry 	"Slightly fills Belly, Restores full HP, increase max HP by 2 when HP is full "		
+			
+Category	Seeds	Location	
+Allure Seed 	"Enters Cross-Eyed status, slightly fills Belly "	  	
+Blast Seed 	"Takes damage when eaten, slightly fills Belly "	  	
+Blinker Seed 	"Enters Blinker status, slightly fills Belly "	  	
+Doom Seed 	"Lowers level by 1, slightly fills Belly "	  	
+Eyedrop Seed 	"Enters Eyedrop status to reveal traps and Invisible Pokemon, slightly fills Belly "	  	
+Evil Seed 	"Maximally lowers Defense and Special Defense, slightly fills Belly "	  	
+Golden Seed 	"Raises level by 5, slightly fills Belly "	  	
+Hardblow Seed 	"Maximally raises Attack and Special Attack, slightly fills Belly "	  	
+Heal Seed 	"Heals all status, slightly fills Belly "	  	
+Hunger Seed 	"Lowers max Belly, changes to Hungry Pal status, slightly fills Belly "	  	
+Joy Seed 	"Raises level by 1, slightly fills Belly "	  	
+Life Seed 	"Raises max HP, slightly fills Belly "	  	
+Plain Seed 	"No effect, slightly fills Belly "	  	
+Quick Seed 	"Raises Movement Speed, slightly fills Belly "	  	
+Reviver Seed 	"Revives fainted Pokemon, becomes Plain Seed, only Item Master "	  	
+Sacred Seed 	"Warps to next dungeon floor, slightly fills Belly "	  	
+Sleep Seed 	"Enters Sleep status, slightly fills Belly "	  	
+Stun Seed 	"Enters Petrified status, slightly fills Belly "	  	
+Totter Seed 	"Enters Confused status, slightly fills Belly "	  	
+Vanish Seed 	"Enters Invisible status, slightly fills Belly "	  	
+Warp Seed 	"Warps Pokemon to elsewhere on the same floor, slightly fills Belly"		
+			
+Category	Medicine	Location	
+Calcium 	"Boosts Special Attack, slightly fills Belly "	  	
+Gabite's Scale 	"Heals all status, slightly fills Belly "	  	
+Ginseng 	"Boosts power of set move, no effect on certain moves, slightly fills Belly "	  	
+Iron 	"Boosts Defense, slightly fills Belly "	  	
+Max Elixir 	"Recovers all PP, slightly fills Belly "	  	
+Protein 	"Boosts Attack, slightly fills Belly "	  	
+Tasty Honey 	"Raises IQ, slightly fills Belly "	Via Treasure Chests 	
+Zinc 	"Boosts Special Defense, slightly fills Belly "	  	
+			
+Category	Orb	Location	
+All-Hit Orb 	"Enters Focused status, range: team members in same room "	  	
+All-Mach Orb 	"Raises Movement Speed by 1 level, range: all team members "	  	
+Blowback Orb 	"Knocks a distant target flying, range: straight line "	  	
+Brushoff Orb 	"Warps foes to somewhere else on the same floor, range: same room "	  	
+Cleanse Orb 	"Cleans sticky and gummed up items, range: all team members "	  	
+Decoy Orb 	"Turns target into a Decoy, range: foe in front "	  	
+Drought Orb 	Dries up all water and magma on floor 	  	
+Escape Orb 	"Allows escape from dungeon, range: all team members "	  	
+Evasion Orb 	"Raise Evasion by 1 level, range: user "	  	
+Fill-In Orb 	Turns water or magma in front into floor-tile 	  	
+Foe-Petrify Orb 	"Turns foes into Petrified status, range: whole floor "	  	
+Foe-Seal Orb 	"Turns foes into Paused status, range: same room "	  	
+Foe-Stun Orb 	"Turns foes into Frightened status, range: same room "	  	
+Hail Orb 	Starts Hail weather 	  	
+Hurl Orb 	"Hurls foe to hit other foes, range: foe in front "	  	
+Identify Orb 	"Reveals all held items of Pokemon, range: whole floor "	  	
+Invisify Orb 	"Enters Invisible status, range: user "	  	
+Itemizer Orb 	"Turns target into an item, range: foe in front "	  	
+Lob Orb 	"Inflicts damage up to 2 tiles away, range: 2 tiles "	  	
+Longtoss Orb 	"Enters Long Toss status, range: user "	  	
+Luminous Orb 	Reveals entire floor 	  	
+Mobile Orb 	"Enters Mobile status, range: user "	  	
+Mug Orb 	"Inflicts damage and snatches item, range: foe in front "	  	
+One-Room Orb 	Breaks down all walls in room 	  	
+One-Shot Orb 	"Knocks out foe in one hit, range: foe in front "	  	
+Petrify Orb 	"Turns foes into Petrified status, range: same room "	  	
+Pierce Orb 	"Enters Pierce status, range: user "	  	
+Pounce Orb 	"Pounces on Pokemon in front, regardless of distance "	  	
+Quick Orb 	"Raises Movement Speed by 1 level, range: team members in same room "	  	
+Radar Orb 	Reveals all foes on floor 	  	
+Rainy Orb 	Starts Rain weather 	  	
+Rebound Orb 	"Enters Mini Counter status, range: user "	  	
+Rocky Orb 	"Inflicts damage and lowers target's Movement Speed by 1 level, range: foe in front "	  	
+Rollcall Orb 	"Draws all team members to user, range: whole floor "	  	
+Sandy Orb 	Starts Sandstorm weather 	  	
+Scanner Orb 	Reveals all unclaimed items on floor 	  	
+See-Trap Orb 	Reveals all traps on floor 	  	
+Shocker Orb 	"Turns foe into Cowering status, range: foe in front "	  	
+Silence Orb 	"Turns foe into Muzzled status, range: foe in front "	  	
+Sizebust Orb 	"Inflicts more damage if big target size, range: foe in front "	  	
+Slow Orb 	"Lowers foes' Movement Speed by 1 level, range: same room "	  	
+Slumber Orb 	"Turns foe into Sleep status, range: same room "	  	
+Snatch Orb 	"Enters Snatch status, range: user "	  	
+Stairs Orb 	Reveals stairs 	  	
+Stayaway Orb 	"Turns foe into Petrified status and warps to stairs, range: foe in front "	  	
+Sunny Orb 	Starts Sunny weather 	  	
+Switcher Orb 	"Switches position with another Pokemon regardless of distance, range: user "	  	
+Totter Orb 	"Turns foe into Confused status, range: same room "	  	
+Transfer Orb 	"Transform target into different Pokemon on floor, range: foe in front "	  	
+Trapbust Orb 	Destroys all traps in same room 	  	
+Trapper Orb 	"Sets trap on floor, range: user "	  	
+Trawl Orb 	"Draws all items to user, range: whole floor "	  	
+Two-Edge Orb 	"Halves HP of all foes and self, range: same room "	  	
+Warp Orb 	"Warps foe in same room to elsewhere on the same floor, range: straightline "		
+			
+Category	Evolutionary	Location	
+Beauty Scarf 	For evolving Feebas 	  	
+Dawn Stone 	Evolves certain Pokemon 	  	
+Deepseascale 	Evolves Clamperl into Gorebyss 	  	
+Deepseatooth 	Evolves Clamperl into Huntail 	  	
+Dragon Scale 	Evolves Seadra into Kingdra 	  	
+Dubious Disc 	Evolves Porygon2 into Porygon-Z 	  	
+Dusk Stone 	Evolves certain Pokemon 	  	
+Electrizer 	Evolves Electabuzz into Electivire 	  	
+Fire Stone 	Evolves certain Pokemon 	  	
+Frozen Rock 	Evolves Eevee into Glaceon 	  	
+King's Rock 	Evolves certain Pokemon 	  	
+Leaf Stone 	Evolves certain Pokemon 	  	
+Link Cable 	Evolves certain Pokemon 	  	
+Lunar Ribbon 	Evolves certain Pokemon 	  	
+Magmarizer 	Evolves Magmar into Magmortar 	  	
+Metal Coat 	Evolves certain Pokemon 	  	
+Moon Stone 	Evolves certain Pokemon 	  	
+Moss Rock 	Evolves Eevee into Leafeon 	  	
+Mt. Coronet Stone 	Evolves certain Pokemon 	  	
+Oval Stone 	Evolves Happiny into Chansey 	  	
+Protector 	Evolves Rhydon into Rhyperior 	  	
+Razor Claw 	Evolves Sneasel into Weavile 	  	
+Razor Fang 	Evolves Gligar into Gliscor 	  	
+Reaper Cloth 	Evolves Dusclops into Dusknoir 	  	
+Shiny Stone 	Evolves certain Pokemon 	  	
+Sun Ribbon 	Evolves certain Pokemon 	  	
+Sun Stone 	Evolves certain Pokemon 	  	
+Thunderstone 	Evolves certain Pokemon 	  	
+Upgrade 	Evolves Porygon into Porygon2 	  	
+Water Stone 	Evolves certain Pokemon 		
+			
+Category	Misc	Location	
+Enigma Part 	Makes legendaries appear in dungeons 	Only via optional missions 	
+Hidden Gold 	No effect 	Only found in Gold Chambers in optional missions 	
+Key 	For unlocking doors in dungeons 	  	
+Link Box 	For linking and delinking moves 	  	
+Mysterious Egg 	Hatches into Manaphy 	Surrounded Sea B20F 	
+PokeDollar 	Money picked up in dungeons 	  	
+Secret Stoneplate 	Makes legendaries appear in dungeons 	Only via optional missions 	
+Unown Stones (28 types A-) 	"Needed to find Regice, Regirock and Registeel "	Held by wild Unowns 	
+TM			
+HM			
+			
+Category	Chests	Location	
+Adorable Chest (R) 	  		
+Beautiful Chest (Y) 	  		
+Cool Chest (R) 	  		
+Cute Chest (R) 	  		
+Dubious Chest (R) 	  		
+Hard Chest (B) 	  		
+Heavy Chest (B) 	  		
+Light Chest (B) 	  		
+Luxurious Chest (Y) 	  		
+Pretty Chest (Y) 	  		
+Shining Chest (Y) 	  		
+Sparkling Chest (Y) 			

@@ -1,0 +1,23 @@
+Supereffective 	The critical-hit rate of your supereffective moves is increased.
+Self-Control 	Even when you're in the Confused or Blinker status condition, your attacks won't hit your teammates.
+Intimidation 	You intimidate enemies, which may make their moves fail. But it has no effect on faraway enemies or Pokémon with the Inner Focus Ability.
+Trap-Busting 	You may break traps you step on instead of activating them.
+Power-Pitching 	You can throw items farther than usual.
+Recovery 	You can restore your HP more than usual.
+Second-Chance 	When you fail to hit your enemy, your hit rate will be boosted during the next turn.
+Last-Minute 	If your HP gets really low, your evasiveness will be boosted.
+Collector 	This skill increases the chance of an enemy with a Treasure Box appearing.
+Slip-Through 	Your thrown items and delivered moves will conveniently slip through teammates if you want to hit an enemy behind them, and pass through enemies if you want to hit your teammates behind them.
+Item-Seeking 	When you reach a floor, you'll know the number of items on the floor.
+Surveyor 	When you reach a floor, you'll know the layout of the floor.
+Stair-Seeking 	You'll sometimes know where the floor's stairway is.
+PP Restore 	All of your party members' PP may be slightly restored when you reach a new floor.
+Sneaky 	Even if you walk next to sleeping enemies, you can pass them without waking them up.
+Tough 	Even when you take a critical hit, you may hang on with 1 HP.
+Retaliating 	When one of your teammates faints, your Attack, Special Attack, and accuracy go up a lot! The status wears off when you step on a Wonder Tile or move to the next floor.
+Danger-Seeking 	When you reach a floor, you'll know if there is a Monster House on the floor.
+Shop-Seeking 	When you reach a floor, you'll know if there is a shop on the floor.
+Prevention 	When someone in your team gets a status condition, other teammates won't get the same status condition until the Pokémon heals.
+Nutritionist 	You sometimes restore HP and PP when you drink or eat.
+Guard 	When the leader is in a Low HP condition, the teammate near the leader sometimes blocks an attack directed at the leader without taking damage.
+Everlasting 	Your party members won't evolve when they level up. But evolution using an item is possible. 

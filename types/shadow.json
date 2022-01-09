@@ -1,0 +1,138 @@
+{
+  "damage_relations": {
+    "double_damage_from": [],
+    "double_damage_to": [],
+    "half_damage_from": [],
+    "half_damage_to": [],
+    "no_damage_from": [],
+    "no_damage_to": []
+  },
+  "game_indices": [],
+  "generation": {
+    "name": "generation-iii",
+    "url": "https://pokeapi.co/api/v2/generation/3/"
+  },
+  "id": 10002,
+  "move_damage_class": null,
+  "moves": [
+    {
+      "name": "shadow-rush",
+      "url": "https://pokeapi.co/api/v2/move/10001/"
+    },
+    {
+      "name": "shadow-blast",
+      "url": "https://pokeapi.co/api/v2/move/10002/"
+    },
+    {
+      "name": "shadow-blitz",
+      "url": "https://pokeapi.co/api/v2/move/10003/"
+    },
+    {
+      "name": "shadow-bolt",
+      "url": "https://pokeapi.co/api/v2/move/10004/"
+    },
+    {
+      "name": "shadow-break",
+      "url": "https://pokeapi.co/api/v2/move/10005/"
+    },
+    {
+      "name": "shadow-chill",
+      "url": "https://pokeapi.co/api/v2/move/10006/"
+    },
+    {
+      "name": "shadow-end",
+      "url": "https://pokeapi.co/api/v2/move/10007/"
+    },
+    {
+      "name": "shadow-fire",
+      "url": "https://pokeapi.co/api/v2/move/10008/"
+    },
+    {
+      "name": "shadow-rave",
+      "url": "https://pokeapi.co/api/v2/move/10009/"
+    },
+    {
+      "name": "shadow-storm",
+      "url": "https://pokeapi.co/api/v2/move/10010/"
+    },
+    {
+      "name": "shadow-wave",
+      "url": "https://pokeapi.co/api/v2/move/10011/"
+    },
+    {
+      "name": "shadow-down",
+      "url": "https://pokeapi.co/api/v2/move/10012/"
+    },
+    {
+      "name": "shadow-half",
+      "url": "https://pokeapi.co/api/v2/move/10013/"
+    },
+    {
+      "name": "shadow-hold",
+      "url": "https://pokeapi.co/api/v2/move/10014/"
+    },
+    {
+      "name": "shadow-mist",
+      "url": "https://pokeapi.co/api/v2/move/10015/"
+    },
+    {
+      "name": "shadow-panic",
+      "url": "https://pokeapi.co/api/v2/move/10016/"
+    },
+    {
+      "name": "shadow-shed",
+      "url": "https://pokeapi.co/api/v2/move/10017/"
+    },
+    {
+      "name": "shadow-sky",
+      "url": "https://pokeapi.co/api/v2/move/10018/"
+    }
+  ],
+  "name": "shadow",
+  "names": [
+    {
+      "language": {
+        "name": "ja-Hrkt",
+        "url": "https://pokeapi.co/api/v2/language/1/"
+      },
+      "name": "ダーク"
+    },
+    {
+      "language": {
+        "name": "ko",
+        "url": "https://pokeapi.co/api/v2/language/3/"
+      },
+      "name": "다크"
+    },
+    {
+      "language": {
+        "name": "fr",
+        "url": "https://pokeapi.co/api/v2/language/5/"
+      },
+      "name": "Obscur"
+    },
+    {
+      "language": {
+        "name": "de",
+        "url": "https://pokeapi.co/api/v2/language/6/"
+      },
+      "name": "Crypto"
+    },
+    {
+      "language": {
+        "name": "it",
+        "url": "https://pokeapi.co/api/v2/language/8/"
+      },
+      "name": "Ombra"
+    },
+    {
+      "language": {
+        "name": "en",
+        "url": "https://pokeapi.co/api/v2/language/9/"
+      },
+      "name": "Shadow"
+    }
+  ],
+  "past_damage_relations": [],
+  "pokemon": []
+}
