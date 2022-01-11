@@ -1,6 +1,7 @@
 from time import sleep
 from traceback import print_tb
 
+from ConsoleMenu import ConsoleMenu
 from calculations import *
 from classes import *
 from data_access import get_pokemon_info, get_pokemon, POKEMON_SLEEP_WHITELIST
@@ -96,6 +97,7 @@ def select_move_switch_run(pokemon: PokemonWithStats):
         a[f"{move.name.capitalize()} ({move.pp - pokemon.move_pp[move.name]}/{move.pp})"] = move
     a["Switch Pokemon"] = 'switch'
     a["Run"] = 'run'
+    a["Others"] = "other"
     move = wait_for_click("Select your attack: ", a)
     if move is None:
         return None
@@ -106,7 +108,7 @@ def select_move_switch_run(pokemon: PokemonWithStats):
 def encounter(team, current_battle):
     while True:
         if current_battle["second_pokemon"] is None:
-            encounter = generate_random_computer_pokemon(avarage_level(team) - 10)
+            encounter = generate_random_computer_pokemon(avarage_level(team))
             if encounter is None or encounter == "":
                 print("Cancel encounter creation...")
                 return
@@ -121,8 +123,35 @@ def encounter(team, current_battle):
                 return
             else:
                 current_battle["first_pokemon"] = pokemon
+        elif current_battle["first_pokemon"] is None:
+            a = {}
+            for pkmn in team:
+                a[pkmn.name] = pkmn
+            pokemon = wait_for_click("Who will fight?", a)
+            if pokemon is None:
+                return
+            else:
+                current_battle["first_pokemon"] = pokemon
         else:
             print(f"TURN {current_battle['turn']}")
+
+            a = wait_for_click("What to do?", {
+                "Fight": 1,
+                "Change stats": 2,
+            })
+            if a == 2:
+                met = wait_for_click("A", {
+                    f"{current_battle['first_pokemon'].name} modify": "first",
+                    f"{current_battle['second_pokemon'].name} modify": "second",
+                    "Back": "back"
+                })
+                if met == "back":
+                    continue
+                elif met == "first":
+                    pokemon_menu(current_battle["first_pokemon"]).execute()
+                elif met == "second":
+                    pokemon_menu(current_battle["second_pokemon"]).execute()
+
             result = battle_round(current_battle["first_pokemon"], current_battle["second_pokemon"],
                                   recently_first_switched=current_battle["first_switched"],
                                   recently_second_switched=current_battle["second_switched"])
@@ -151,6 +180,8 @@ def encounter(team, current_battle):
 
                 response = wait_for_click("What to do?", {
                     "Continue": "con",
+                    f"{current_battle['first_pokemon'].name} modify": pokemon_menu(current_battle["first_pokemon"]),
+                    f"{current_battle['second_pokemon'].name} modify": pokemon_menu(current_battle["second_pokemon"]),
                     "Menu": "menu"
                 })
                 if response is None or response == "menu":
@@ -169,6 +200,7 @@ def encounter(team, current_battle):
                 else:
                     # END OF THE BATTLE!
                     print(f"Team wins!")
+                    current_battle['second_pokemon'] = None
                     return
 
 
@@ -439,13 +471,14 @@ def fight(attacker: PokemonWithStats, defender: PokemonWithStats, move: PokemonM
 
 
 def pokemon_get_move_switch_run(pokemon: PokemonWithStats):
-    if pokemon.computer_controlled:
-        return random.choice(pokemon.pokemon.moves)
-    else:
-        response = select_move_switch_run(pokemon)
-        if response is None:
-            return None
-        return response
+    while True:
+        if pokemon.computer_controlled:
+            return random.choice(pokemon.pokemon.moves)
+        else:
+            response = select_move_switch_run(pokemon)
+            if response is None:
+                return None
+            return response
 
 
 def damage_pokemon(pokemon: PokemonWithStats, damage):
@@ -525,3 +558,132 @@ def battle_round(first_pokemon: PokemonWithStats, second_pokemon: PokemonWithSta
     print("--------------------")
 
     return {"status": "continue"}
+
+
+def heal_pokemon_from_console(value: str, pokemon: PokemonWithStats):
+    if value is None:
+        return
+    if "%" in value:
+        percentage = float(value[:-1]) / 100
+        heal_pokemon(pokemon, get_max_hp(pokemon) * percentage)
+    else:
+        heal_pokemon(pokemon, int(value))
+
+
+def damage_pokemon_from_console(value: str, pokemon: PokemonWithStats):
+    if value is None:
+        return
+    if "%" in value:
+        percentage = float(value[:-1]) / 100
+        damage_pokemon(pokemon, get_max_hp(pokemon) * percentage)
+    else:
+        damage_pokemon(pokemon, int(value))
+
+
+def edit_stat(stat: str, pokemon: PokemonWithStats):
+    try:
+        if stat == "hp":
+            value = wait_for_click("Heal of damage?",
+                                   {"Heal": "heal", "Damage": "damage", "Faint": "faint", "Respawn": "respawn",
+                                    "Full heal": "full_heal"})
+            if value is None:
+                return
+            match value:
+                case "heal":
+                    value = input("How much HP should you heal pokemon? You can use percentage or value")
+                    heal_pokemon_from_console(value, pokemon)
+                case "damage":
+                    value = input("How much damage do you want to deal your pokemon? You can use percentage or value")
+                    damage_pokemon_from_console(value, pokemon)
+                case "faint":
+                    damage_pokemon_from_console("100%", pokemon)
+                case "respawn":
+                    heal_pokemon_from_console("50%", pokemon)
+                case "full_heal":
+                    heal_pokemon_from_console("100%", pokemon)
+
+            if fainted(pokemon):
+                print(f"{pokemon.name} fainted!")
+
+            if value == "max":
+                pokemon.stats_changes.hp = 0
+
+
+        else:
+            value = int(input(f"Type new value for {stat.capitalize()} "))
+            match stat:
+                case classes.ATTACK:
+                    pokemon.stats_changes.attack = value
+                case classes.DEFENSE:
+                    pokemon.stats_changes.defense = value
+                case classes.SP_ATTACK:
+                    pokemon.stats_changes.special_attack = value
+                case classes.SP_DEFENSE:
+                    pokemon.stats_changes.special_defense = value
+                case classes.SPEED:
+                    pokemon.stats_changes.speed = value
+                case "acc":
+                    pokemon.stats_changes.accuracy = value
+                case "evs":
+                    pokemon.stats_changes.evasiveness = value
+                case "crit":
+                    pokemon.stats_changes.critical = value
+
+            print(f"New value for {stat.capitalize()} is {value}")
+
+
+    except Exception:
+        print("Cancelled")
+        return
+
+    pass
+
+
+def pokemon_stat_menu(pokemon: PokemonWithStats):
+    while True:
+        response = wait_for_click("Edit:", {
+            f"ATT {pokemon.stats_changes.attack} ({get_stat(pokemon, ATTACK)})": lambda: edit_stat(ATTACK, pokemon),
+            f"DEF {pokemon.stats_changes.defense} ({get_stat(pokemon, DEFENSE)})": lambda: edit_stat(DEFENSE, pokemon),
+            f"SP_ATT {pokemon.stats_changes.special_attack} ({get_stat(pokemon, SP_ATTACK)})": lambda: edit_stat(
+                SP_ATTACK,
+                pokemon),
+            f"SP_DEF {pokemon.stats_changes.special_defense} ({get_stat(pokemon, SP_DEFENSE)})": lambda: edit_stat(
+                SP_DEFENSE, pokemon),
+            f"SPEED {pokemon.stats_changes.speed} ({get_stat(pokemon, SPEED)})": lambda: edit_stat(SPEED, pokemon),
+            f"CRIT {pokemon.stats_changes.critical}": lambda: edit_stat("crit", pokemon),
+            f"ACC {pokemon.stats_changes.accuracy}": lambda: edit_stat("acc", pokemon),
+            f"EVS {pokemon.stats_changes.evasiveness}": lambda: edit_stat("evs", pokemon),
+            f"HP {pokemon.stats_changes.hp} ({get_hp(pokemon)}/{get_max_hp(pokemon)})": lambda: edit_stat("hp", pokemon)
+        })
+        if response is None:
+            return
+        response()
+
+
+def pokemon_status_menu(pokemon: PokemonWithStats):
+    while True:
+        value = wait_for_click("Stats (type to toggle): ", {
+            f"Flinched ({pokemon.flinched})": "flinched",
+            f"Paralyzed ({pokemon.paralysed})": "paralysed",
+            f"Asleep ({pokemon.asleep})": "asleep",
+            f"Frozen ({pokemon.frozen})": "frozen",
+            f"Burned ({pokemon.burned})": "burned",
+            f"Poisoned ({pokemon.poisoned})": "poisoned",
+            f"Confused ({pokemon.confused})": "confused",
+            f"Attracted ({pokemon.attracted})": "attracted",
+            f"Trapped ({pokemon.trapped})": "trapped",
+
+        })
+
+        if value is None:
+            return
+        setattr(pokemon, value, not getattr(pokemon, value))
+
+
+def pokemon_menu(pkmn: PokemonWithStats):
+    return ConsoleMenu(f"{pkmn.name}", {
+        "Print Details": lambda: print(get_pokemon_stats_formatted(pkmn)),
+        "Change stats": lambda: pokemon_stat_menu(pkmn),
+        "Change status": lambda: pokemon_status_menu(pkmn),
+
+    })

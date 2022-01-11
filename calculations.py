@@ -139,7 +139,9 @@ def stage_evasion(stage_evasion):
 
 
 def calculate_accuracy(move_accuracy, acc_stage, eva_stage, other=1):
-    return move_accuracy * stage_accuracy(acc_stage - eva_stage) * other
+    if move_accuracy is not None:
+        return move_accuracy * stage_accuracy(acc_stage - eva_stage) * other
+    return 100
 
 
 def percentage_hit_chance(accuracy):

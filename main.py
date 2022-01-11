@@ -5,14 +5,11 @@ from typing import Optional
 
 import jsonpickle
 
-import calculations
-import classes
 import level_generator
 from ConsoleMenu import ConsoleMenu
-from battle_scripts import get_pokemon_stats_formatted, encounter, get_team, wait_for_click, get_max_hp, heal_pokemon, \
-    damage_pokemon, get_hp
-from calculations import get_stat
-from classes import PokemonWithStats, ATTACK, DEFENSE, SP_ATTACK, SP_DEFENSE, SPEED
+from battle_scripts import encounter, get_team, wait_for_click, get_max_hp, get_hp, heal_pokemon_from_console, \
+    pokemon_menu
+from classes import PokemonWithStats
 from data_access import get_pokemon
 from level_generator import navigate_floor
 
@@ -33,133 +30,6 @@ team = [PokemonWithStats("Zarion", 40, get_pokemon("absol", "super luck", ["dark
 # print(team)
 
 
-def heal_pokemon_from_console(value: str, pokemon: PokemonWithStats):
-    if value is None:
-        return
-    if "%" in value:
-        percentage = float(value[:-1]) / 100
-        heal_pokemon(pokemon, get_max_hp(pokemon) * percentage)
-    else:
-        heal_pokemon(pokemon, int(value))
-
-
-def damage_pokemon_from_console(value: str, pokemon: PokemonWithStats):
-    if value is None:
-        return
-    if "%" in value:
-        percentage = float(value[:-1]) / 100
-        damage_pokemon(pokemon, get_max_hp(pokemon) * percentage)
-    else:
-        damage_pokemon(pokemon, int(value))
-
-
-def edit_stat(stat: str, pokemon: PokemonWithStats):
-    try:
-        if stat == "hp":
-            value = wait_for_click("Heal of damage?",
-                                   {"Heal": "heal", "Damage": "damage", "Faint": "faint", "Respawn": "respawn",
-                                    "Full heal": "full_heal"})
-            if value is None:
-                return
-            match value:
-                case "heal":
-                    value = input("How much HP should you heal pokemon? You can use percentage or value")
-                    heal_pokemon_from_console(value, pokemon)
-                case "damage":
-                    value = input("How much damage do you want to deal your pokemon? You can use percentage or value")
-                    damage_pokemon_from_console(value, pokemon)
-                case "faint":
-                    damage_pokemon_from_console("100%", pokemon)
-                case "respawn":
-                    heal_pokemon_from_console("50%", pokemon)
-                case "full_heal":
-                    heal_pokemon_from_console("100%", pokemon)
-
-            if calculations.fainted(pokemon):
-                print(f"{pokemon.name} fainted!")
-
-            if value == "max":
-                pokemon.stats_changes.hp = 0
-
-
-        else:
-            value = int(input(f"Type new value for {stat.capitalize()} "))
-            match stat:
-                case classes.ATTACK:
-                    pokemon.stats_changes.attack = value
-                case classes.DEFENSE:
-                    pokemon.stats_changes.defense = value
-                case classes.SP_ATTACK:
-                    pokemon.stats_changes.special_attack = value
-                case classes.SP_DEFENSE:
-                    pokemon.stats_changes.special_defense = value
-                case classes.SPEED:
-                    pokemon.stats_changes.speed = value
-                case "acc":
-                    pokemon.stats_changes.accuracy = value
-                case "evs":
-                    pokemon.stats_changes.evasiveness = value
-                case "crit":
-                    pokemon.stats_changes.critical = value
-
-            print(f"New value for {stat.capitalize()} is {value}")
-
-
-    except Exception:
-        print("Cancelled")
-        return
-
-    pass
-
-
-def pokemon_stat_menu(pokemon: PokemonWithStats):
-    while True:
-        response = wait_for_click("Edit:", {
-            f"ATT {pokemon.stats_changes.attack} ({get_stat(pokemon, ATTACK)})": lambda: edit_stat(ATTACK, pokemon),
-            f"DEF {pokemon.stats_changes.defense} ({get_stat(pokemon, DEFENSE)})": lambda: edit_stat(DEFENSE, pokemon),
-            f"SP_ATT {pokemon.stats_changes.special_attack} ({get_stat(pokemon, SP_ATTACK)})": lambda: edit_stat(
-                SP_ATTACK,
-                pokemon),
-            f"SP_DEF {pokemon.stats_changes.special_defense} ({get_stat(pokemon, SP_DEFENSE)})": lambda: edit_stat(
-                SP_DEFENSE, pokemon),
-            f"SPEED {pokemon.stats_changes.speed} ({get_stat(pokemon, SPEED)})": lambda: edit_stat(SPEED, pokemon),
-            f"CRIT {pokemon.stats_changes.critical}": lambda: edit_stat("crit", pokemon),
-            f"ACC {pokemon.stats_changes.accuracy}": lambda: edit_stat("acc", pokemon),
-            f"EVS {pokemon.stats_changes.evasiveness}": lambda: edit_stat("evs", pokemon),
-            f"HP {pokemon.stats_changes.hp} ({get_hp(pokemon)}/{get_max_hp(pokemon)})": lambda: edit_stat("hp", pokemon)
-        })
-        if response is None:
-            return
-        response()
-
-
-def pokemon_status_menu(pokemon: PokemonWithStats):
-    while True:
-        value = wait_for_click("Stats (type to toggle): ", {
-            f"Flinched ({pokemon.flinched})": "flinched",
-            f"Paralyzed ({pokemon.paralysed})": "paralysed",
-            f"Asleep ({pokemon.asleep})": "asleep",
-            f"Frozen ({pokemon.frozen})": "frozen",
-            f"Burned ({pokemon.burned})": "burned",
-            f"Poisoned ({pokemon.poisoned})": "poisoned",
-            f"Confused ({pokemon.confused})": "confused",
-            f"Attracted ({pokemon.attracted})": "attracted",
-            f"Trapped ({pokemon.trapped})": "trapped",
-
-        })
-
-        if value is None:
-            return
-        setattr(pokemon, value, not getattr(pokemon, value))
-
-
-def pokemon_menu(pkmn: PokemonWithStats):
-    return ConsoleMenu(f"{pkmn.name}", {
-        "Print Details": lambda: print(get_pokemon_stats_formatted(pkmn)),
-        "Change stats": lambda: pokemon_stat_menu(pkmn),
-        "Change status": lambda: pokemon_status_menu(pkmn),
-
-    })
 
 
 def hp_heal_team():
